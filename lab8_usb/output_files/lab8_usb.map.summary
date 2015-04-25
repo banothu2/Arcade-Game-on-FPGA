@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Apr 24 20:53:23 2015
+Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Full Version
+Revision Name : lab8_usb
+Top-level Entity Name : lab8_usb
+Family : Cyclone IV E
+Total logic elements : 6,889
+    Total combinational functions : 5,775
+    Dedicated logic registers : 2,581
+Total registers : 2581
+Total pins : 194
+Total virtual pins : 0
+Total memory bits : 16,000
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
