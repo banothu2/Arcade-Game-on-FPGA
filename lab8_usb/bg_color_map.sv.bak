@@ -1,0 +1,72 @@
+module bg_color_map	( input		[9:0] DrawX, DrawY,
+					  output logic [7:0] Red, Green, Blue);
+
+	logic bg_on;
+	logic [9:0]	shape_x = 100;
+	logic [9:0] shape_y = 100;
+	logic [9:0] shape_size_x = 253;
+	logic [9:0] shape_size_y = 212;
+	logic [7:0] sprite_addr;
+	logic [1011:0] sprite_data;
+	background_rom (.addr(sprite_addr), .data(sprite_data));
+
+	always_comb
+	begin
+		if(DrawX >= shape_x && DrawX < shape_x + shape_size_x && DrawY >= shape_y && DrawY < shape_y + shape_size_y)
+		begin
+			bg_on = 1'b1;
+			sprite_addr = (DrawY - shape_y);
+		end
+		else
+		begin
+			bg_on = 1'b0;
+			sprite_addr = 7'b0;
+		end
+	end
+
+	
+	always_comb
+	begin
+		if(bg_on == 1'b1)
+		begin
+			case (sprite_data[(4 * (DrawX - shape_x)) : (4 * (DrawX - shape_x + 1) - 1)])
+				4'h00:
+				begin
+					Red = 8'h00;
+					Green = 8'h00;
+					Blue = 8'h00;
+				end
+				4'h01:
+				begin
+					Red = 8'd0;
+					Green = 8'd130;
+					Blue = 8'd198;
+				end
+				4'h02:
+				begin
+					Red = 8'd206;
+					Green = 8'd203;
+					Blue = 8'd206;
+				end
+				4'h03:
+				begin
+					Red = 8'd255;
+					Green = 8'd251;
+					Blue = 8'd255;
+				end
+				4'h04:
+				begin
+					Red = 8'd0;
+					Green = 8'd73;
+					Blue = 8'd8;
+				end
+				default:
+				begin
+					Red = 8'h00;
+					Green = 8'h00;
+					Blue = 8'h00;
+				end
+		endcase
+	end
+
+endmodule
