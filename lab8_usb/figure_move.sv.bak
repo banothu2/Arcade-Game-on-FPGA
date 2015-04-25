@@ -1,0 +1,88 @@
+
+
+module figure(	input Reset, frame_clk,
+					input [7:0] keycode_move,
+					output [9:0]	fg_x, fg_y,
+					output [3:0] 	fg_move, bg_move,
+					output 	fg_shoot);
+					
+	parameter [9:0] YLEVEL_0 = 237;
+	parameter [9:0] YLEVEL_1 = 210;
+	logic [9:0]	FG_X, FG_Y, FG_X_Motion, FG_Y_Motion;
+	logic [3:0] FG_Move, BG_Move;
+	parameter [9:0]	FG_X_Min = 0;
+	parameter [9:0]	FG_X_Max = 639;
+	parameter [9:0]	FG_Y_Min = 0;
+	parameter	[9:0]	FG_Y_Max = 479;
+	parameter	[9:0]	FG_X_step = 3;
+	parameter	[9:0]	FG_Y_step = 10;
+	
+	always_ff @ (posedge Reset or posedge frame_clk)
+	begin:Move figure
+		if(Reset)
+		begin
+			FG_X <= 10'd150;
+			FG_Y <= 10'd237;
+			FG_X_step <= 10'b0;
+			FG_Y_step <= 10'b0;
+		end
+				/*
+		FG_Move:
+		0:	Stay
+		1:	Right
+		2:	Left
+		3:	Down
+		4:	Up
+		5:	RightJump
+		6:	LeftJump
+		7:	RightDown
+		8:	LeftDown
+		9: Air
+		*/
+		else
+		begin
+			case(keycode_move)
+			8'h04:
+				begin
+					FG_Move <= 4'h2;
+					FG_X_Motion <= ( ~ (FG_X_step) + 1'b1);
+					FG_Y_Motion <= 10'd0;
+				end
+			8'h1a:
+				begin
+					FG_Move <= 4'h4;
+					if (FG_X_Motion != 10'd0)
+						FG_X_Motion <= FG_X_Motion - 1'b1;
+					else
+						FG_X_Motion <= 10'd0;
+					FG_Y_Motion <= FG_Y_step;
+				end
+			8'h16:
+				begin
+					FG_Move <= 4'h3;
+					FG_Y_Motion <= ( ~ (FG_Y_step) + 1'b1)
+					if (FG_X_Motion != 10'd0)
+						FG_X_Motion <= FG_X_Motion - 1'b1;
+					else
+						FG_X_Motion <= 10'd0;
+				end
+			8'h07:
+				begin
+					FG_Move <= 4'h1;
+					FG_X_Motion <= FG_X_step;
+					FG_Y_Motion <= 10'd0;
+				end
+					
+			endcase
+			BG_Move <= 4'h0;
+			FG_X <= FG_X + FG_X_Motion;
+			FG_Y <= FG_Y + FG_Y_Motion;
+		end
+	end
+	
+	assign	fg_x = FG_X;
+	assign 	fg_y = FG_Y;
+	assign bg_move = BG_Move;
+	assign fg_move = FG_Move;
+endmodule
+		
