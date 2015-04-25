@@ -46,6 +46,7 @@ module  lab8_usb 		( input         Clk,
     
     logic Reset_h;
 	 logic [7:0] keycode;
+	 logic [7:0] keycode_three_four;
     
     assign {Reset_h}=~ (Reset);  // The push buttons are active low
 	 assign OTG_FSPEED = 1'bz;
@@ -64,7 +65,7 @@ module  lab8_usb 		( input         Clk,
 										 .sdram_wire_ras_n(sdram_wire_ras_n),
 										 .sdram_wire_we_n(sdram_wire_we_n), 
 										 .sdram_out_clk_clk(sdram_clk),
-										 .keycode_export(keycode),  
+										 .keycode_export(keycode_three_four), 
 										 .usb_DATA(OTG_DATA),    
 										 .usb_ADDR(OTG_ADDR),    
 										 .usb_RD_N(OTG_RD_N),    
@@ -109,7 +110,7 @@ module  lab8_usb 		( input         Clk,
 	logic fg_shoot;
 	figure fg_instance 	(	.Reset(Reset_h),
 									.frame_clk(vs),
-									.keycode_move(keycode),
+									.keycode_move(keycode_three_four),
 									.fg_x(fg_x),
 									.fg_y(fg_y),
 									.fg_move(fg_move),

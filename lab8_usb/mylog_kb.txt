@@ -3,5 +3,6 @@ Pausing target processor: OK
 Initializing CPU cache (if present)
 OK
 Downloading 08000000 ( 0%)Downloading 080104D4 (89%)Downloaded 66KB in 1.0s (66.0KB/s)
-Verifying 08000000 ( 0%)Verifying 080104D4 (89%)Verified OK                         
-Starting processor at address 0x080001B8
+Verifying 08000000 ( 0%)
+Verify failed between address 0x8000000 and 0x800EA7B
+Leaving target processor paused

@@ -2,11 +2,11 @@
 <?scdStore version="2"?>
 
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.88197619;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.88197619.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1640407336;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1206777100">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1879097077;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1879097077.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1378711949;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1889210743">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/banothu/FinalProject-2015-04-24/FinalProject/lab8_usb/software/usb_kb_bsp/HAL/inc"/>
-<includePath path="C:/banothu/FinalProject-2015-04-24/FinalProject/lab8_usb/software/usb_kb_bsp/"/>
-<includePath path="C:/banothu/FinalProject-2015-04-24/FinalProject/lab8_usb/software/usb_kb_bsp/drivers/inc"/>
+<includePath path="C:/banothu/Arcade-Game-on-FPGA/lab8_usb/software/usb_kb_bsp/HAL/inc"/>
+<includePath path="C:/banothu/Arcade-Game-on-FPGA/lab8_usb/software/usb_kb_bsp/"/>
+<includePath path="C:/banothu/Arcade-Game-on-FPGA/lab8_usb/software/usb_kb_bsp/drivers/inc"/>
 <includePath path="C:\altera\14.0\quartus\bin64\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++"/>
 <includePath path="C:\altera\14.0\quartus\bin64\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++\i686-pc-cygwin"/>
 <includePath path="C:\altera\14.0\quartus\bin64\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++\backward"/>
@@ -230,11 +230,11 @@
 <definedSymbol symbol="ALT_SINGLE_THREADED=1"/>
 </collector>
 </instance>
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.88197619;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.88197619.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.18900165;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1385237453">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1879097077;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1879097077.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.896519572;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1002343960">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/banothu/FinalProject-2015-04-24/FinalProject/lab8_usb/software/usb_kb_bsp/HAL/inc"/>
-<includePath path="C:/banothu/FinalProject-2015-04-24/FinalProject/lab8_usb/software/usb_kb_bsp/"/>
-<includePath path="C:/banothu/FinalProject-2015-04-24/FinalProject/lab8_usb/software/usb_kb_bsp/drivers/inc"/>
+<includePath path="C:/banothu/Arcade-Game-on-FPGA/lab8_usb/software/usb_kb_bsp/HAL/inc"/>
+<includePath path="C:/banothu/Arcade-Game-on-FPGA/lab8_usb/software/usb_kb_bsp/"/>
+<includePath path="C:/banothu/Arcade-Game-on-FPGA/lab8_usb/software/usb_kb_bsp/drivers/inc"/>
 <includePath path="C:\altera\14.0\quartus\bin64\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include"/>
 <includePath path="C:\altera\14.0\quartus\bin64\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include-fixed"/>
 <includePath path="C:\altera\14.0\quartus\bin64\cygwin\usr\include"/>

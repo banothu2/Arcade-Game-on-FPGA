@@ -33,41 +33,41 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   7 .debug_aranges 00000d80  00000000  00000000  000114f8  2**3
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_info   000229ad  00000000  00000000  00012278  2**0
+  8 .debug_info   0002297a  00000000  00000000  00012278  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_abbrev 00008eb9  00000000  00000000  00034c25  2**0
+  9 .debug_abbrev 00008eb9  00000000  00000000  00034bf2  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_line   0000a3ba  00000000  00000000  0003dade  2**0
+ 10 .debug_line   0000a3ba  00000000  00000000  0003daab  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_frame  000019a0  00000000  00000000  00047e98  2**2
+ 11 .debug_frame  000019a0  00000000  00000000  00047e68  2**2
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_str    00002e6d  00000000  00000000  00049838  2**0
+ 12 .debug_str    00002e4b  00000000  00000000  00049808  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_loc    00010ec0  00000000  00000000  0004c6a5  2**0
+ 13 .debug_loc    00010ec0  00000000  00000000  0004c653  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_alt_sim_info 00000040  00000000  00000000  0005d568  2**2
+ 14 .debug_alt_sim_info 00000040  00000000  00000000  0005d514  2**2
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_ranges 00000ab0  00000000  00000000  0005d5a8  2**3
+ 15 .debug_ranges 00000ab0  00000000  00000000  0005d558  2**3
                   CONTENTS, READONLY, DEBUGGING
- 16 .thread_model 00000003  00000000  00000000  00061074  2**0
+ 16 .thread_model 00000003  00000000  00000000  00061024  2**0
                   CONTENTS, READONLY
- 17 .cpu          00000003  00000000  00000000  00061077  2**0
+ 17 .cpu          00000003  00000000  00000000  00061027  2**0
                   CONTENTS, READONLY
- 18 .qsys         00000001  00000000  00000000  0006107a  2**0
+ 18 .qsys         00000001  00000000  00000000  0006102a  2**0
                   CONTENTS, READONLY
- 19 .simulation_enabled 00000001  00000000  00000000  0006107b  2**0
+ 19 .simulation_enabled 00000001  00000000  00000000  0006102b  2**0
                   CONTENTS, READONLY
- 20 .stderr_dev   00000009  00000000  00000000  0006107c  2**0
+ 20 .stderr_dev   00000009  00000000  00000000  0006102c  2**0
                   CONTENTS, READONLY
- 21 .stdin_dev    00000009  00000000  00000000  00061085  2**0
+ 21 .stdin_dev    00000009  00000000  00000000  00061035  2**0
                   CONTENTS, READONLY
- 22 .stdout_dev   00000009  00000000  00000000  0006108e  2**0
+ 22 .stdout_dev   00000009  00000000  00000000  0006103e  2**0
                   CONTENTS, READONLY
- 23 .sopc_system_name 0000000a  00000000  00000000  00061097  2**0
+ 23 .sopc_system_name 0000000a  00000000  00000000  00061047  2**0
                   CONTENTS, READONLY
- 24 .quartus_project_dir 00000038  00000000  00000000  000610a1  2**0
+ 24 .quartus_project_dir 00000027  00000000  00000000  00061051  2**0
                   CONTENTS, READONLY
- 25 .sopcinfo     0004fd93  00000000  00000000  000610d9  2**0
+ 25 .sopcinfo     0004fd93  00000000  00000000  00061078  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 08000000 l    d  .entry	00000000 .entry
@@ -4480,19 +4480,19 @@ void UsbPrintMem()
  8002630:	080023fc 	xorhi	zero,at,143
  8002634:	080023fc 	xorhi	zero,at,143
  8002638:	080023fc 	xorhi	zero,at,143
- 800263c:	08002c80 	call	8002c8 <__alt_mem_sdram-0x77ffd38>
+ 800263c:	08002c80 	call	8002c8 <__reset-0x77ffd38>
  8002640:	08002cb4 	orhi	zero,at,178
  8002644:	080028d4 	ori	zero,at,163
  8002648:	080028d4 	ori	zero,at,163
  800264c:	080028d4 	ori	zero,at,163
- 8002650:	08002c00 	call	8002c0 <__alt_mem_sdram-0x77ffd40>
+ 8002650:	08002c00 	call	8002c0 <__reset-0x77ffd40>
  8002654:	08002cb4 	orhi	zero,at,178
  8002658:	080023fc 	xorhi	zero,at,143
  800265c:	080023fc 	xorhi	zero,at,143
  8002660:	08002a8c 	andi	zero,at,170
  8002664:	080023fc 	xorhi	zero,at,143
  8002668:	08002aa4 	muli	zero,at,170
- 800266c:	08002cc0 	call	8002cc <__alt_mem_sdram-0x77ffd34>
+ 800266c:	08002cc0 	call	8002cc <__reset-0x77ffd34>
  8002670:	08002b04 	addi	zero,at,172
  8002674:	08002b54 	ori	zero,at,173
  8002678:	080023fc 	xorhi	zero,at,143
@@ -18418,7 +18418,7 @@ int alt_get_fd (alt_dev* dev)
  800dd28:	d9400015 	stw	r5,0(sp)
  800dd2c:	d9800115 	stw	r6,4(sp)
  800dd30:	d9c00215 	stw	r7,8(sp)
- 800dd34:	00000000 	call	0 <__alt_mem_sdram-0x8000000>
+ 800dd34:	00000000 	call	0 <__reset-0x8000000>
  800dd38:	d9400017 	ldw	r5,0(sp)
  800dd3c:	d9800117 	ldw	r6,4(sp)
  800dd40:	d9c00217 	ldw	r7,8(sp)
@@ -18565,7 +18565,7 @@ int alt_get_fd (alt_dev* dev)
  800df6c:	18000926 	beq	r3,zero,800df94 <__call_exitprocs+0x198>
  800df70:	9009883a 	mov	r4,r18
  800df74:	b8c00015 	stw	r3,0(r23)
- 800df78:	00000000 	call	0 <__alt_mem_sdram-0x8000000>
+ 800df78:	00000000 	call	0 <__reset-0x8000000>
  800df7c:	bc800017 	ldw	r18,0(r23)
  800df80:	003fb506 	br	800de58 <__alt_data_end+0xf800de58>
  800df84:	90c00017 	ldw	r3,0(r18)

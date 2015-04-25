@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Apr 24, 2015 8:30:43 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1429925443238</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\banothu\FinalProject-2015-04-24\FinalProject\lab8_usb\software\usb_kb_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Apr 24, 2015 9:21:33 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1429928493220</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\banothu\Arcade-Game-on-FPGA\lab8_usb\software\usb_kb_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\usb_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
